@@ -1,5 +1,6 @@
 import { Box, Typography, Container, Button, Grid, useMediaQuery, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import profileImage from '../assets/profile.jpg';
 
 const Home = () => {
@@ -17,7 +18,7 @@ const Home = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url("/hero-bg.jpg")',
+        background: 'linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9))',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -107,7 +108,8 @@ const Home = () => {
                   variant="contained"
                   color="primary"
                   size="large"
-                  href="/contact"
+                  component={Link}
+                  to="/contact"
                   sx={{
                     borderRadius: 3,
                     px: 6,
@@ -199,13 +201,9 @@ const Home = () => {
                   }}
                 >
                   <Box
-                    component={motion.img}
+                    component="img"
                     src={profileImage}
                     alt="Profile"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 1.3, duration: 0.8 }}
-                    whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                     sx={{
                       width: '100%',
                       height: '100%',
