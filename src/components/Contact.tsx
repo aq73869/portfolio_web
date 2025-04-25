@@ -31,7 +31,7 @@ const Contact = () => {
     { platform: 'facebook', url: 'https://www.facebook.com/home.php' },
     { platform: 'twitter', url: 'https://twitter.com/@a1_boy_lucky' },
     { platform: 'instagram', url: 'https://instagram.com/iam_quadir_' },
-    { platform: 'linkedin', url: 'https://linkedin.com/in/Abdul Quadir' }
+    { platform: 'linkedin', url: 'https://linkedin.com/in/Abdul-Quadir' }
   ];
 
   const handleSocialClick = (url: string) => {

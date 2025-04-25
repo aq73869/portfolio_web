@@ -4,7 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 
 const Navbar = () => {
-  const theme = useTheme();
+  useTheme(); // Keep the hook for potential future use
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 

@@ -1,0 +1,16 @@
+# netlify.toml
+# This file configures how Netlify builds and deploys your site
+
+[build]
+  # Directory to publish (relative to root of your repo)
+  publish = "dist"
+  
+  # Default build command
+  command = "npm run build"
+
+# The following redirect is necessary for a single-page application
+# It ensures that all routes are handled by index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

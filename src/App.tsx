@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, CssBaseline, createTheme, responsiveFontSizes, Snackbar, Alert } from '@mui/material';
+import { ThemeProvider, CssBaseline, createTheme, responsiveFontSizes } from '@mui/material';
 import { useState, useEffect } from 'react';
 
 // Import components

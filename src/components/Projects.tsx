@@ -1,4 +1,4 @@
-import { Box, Typography, Container, Grid, Paper, Button, Stack, Chip, Divider } from '@mui/material';
+import { Box, Typography, Container, Grid, Paper, Button, Stack, Divider } from '@mui/material';
 import { motion } from 'framer-motion';
 // Import project images from assets
 import foodDeliveryImage from '../assets/food delivery app (1).png';

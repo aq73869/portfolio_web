@@ -1,4 +1,4 @@
-import { Box, Typography, Container, Grid, Tab, Tabs, Paper, useTheme, useMediaQuery, Divider } from '@mui/material';
+import { Box, Typography, Container, Grid, Tab, Tabs, useTheme, useMediaQuery, Divider } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
@@ -29,7 +29,7 @@ const About = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (_: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
