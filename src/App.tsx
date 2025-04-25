@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, CssBaseline, createTheme, responsiveFontSizes } from '@mui/material';
 import { useState, useEffect } from 'react';
 
@@ -186,7 +186,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <Router basename="/portfolio">
+      <Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

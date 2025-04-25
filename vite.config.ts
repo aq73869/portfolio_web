@@ -29,11 +29,13 @@ export default defineConfig({
       },
       workbox: {
         cleanupOutdatedCaches: true,
-        sourcemap: true
+        sourcemap: true,
+        navigateFallback: '/index.html',
+        navigateFallbackAllowlist: [/^\/portfolio\//]
       }
     })
   ],
-  base: '/', // Base public path
+  base: '/portfolio/',
   build: {
     outDir: 'dist',
     sourcemap: true,
