@@ -2,6 +2,7 @@ import { Box, Typography, Container, Button, Grid, useMediaQuery, useTheme } fro
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import profileImage from '../assets/profile.jpg';
+import resumePDF from '../assets/My Resume.pdf';
 
 const Home = () => {
   const theme = useTheme();
@@ -104,29 +105,62 @@ const Home = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.9, duration: 0.8 }}
               >
-                <Button
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  component={Link}
-                  to="/contact"
+                <Box
                   sx={{
-                    borderRadius: 3,
-                    px: 6,
-                    py: 2,
-                    fontSize: { xs: '1rem', sm: '1.1rem' },
-                    textTransform: 'none',
-                    fontWeight: 600,
-                    boxShadow: '0 8px 20px rgba(227, 27, 109, 0.3)',
-                    transition: 'all 0.4s ease',
-                    '&:hover': {
-                      transform: 'translateY(-3px)',
-                      boxShadow: '0 12px 25px rgba(227, 27, 109, 0.4)'
-                    }
+                    display: 'flex',
+                    gap: 2,
+                    justifyContent: 'center',
+                    alignItems: 'center'
                   }}
                 >
-                  Contact Me
-                </Button>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    component={Link}
+                    to="/contact"
+                    sx={{
+                      borderRadius: 3,
+                      px: 6,
+                      py: 2,
+                      fontSize: { xs: '1rem', sm: '1.1rem' },
+                      textTransform: 'none',
+                      fontWeight: 600,
+                      boxShadow: '0 8px 20px rgba(227, 27, 109, 0.3)',
+                      transition: 'all 0.4s ease',
+                      '&:hover': {
+                        transform: 'translateY(-3px)',
+                        boxShadow: '0 12px 25px rgba(227, 27, 109, 0.4)'
+                      }
+                    }}
+                  >
+                    Contact Me
+                  </Button>
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    size="large"
+                    href={resumePDF}
+                    download="Abdul_Quadir_Resume.pdf"
+                    sx={{
+                      borderRadius: 3,
+                      px: 6,
+                      py: 2,
+                      fontSize: { xs: '1rem', sm: '1.1rem' },
+                      textTransform: 'none',
+                      fontWeight: 600,
+                      borderWidth: 2,
+                      transition: 'all 0.4s ease',
+                      '&:hover': {
+                        borderWidth: 2,
+                        transform: 'translateY(-3px)',
+                        boxShadow: '0 8px 15px rgba(227, 27, 109, 0.2)'
+                      }
+                    }}
+                  >
+                    Download Resume
+                  </Button>
+                </Box>
               </motion.div>
             </Box>
           </Grid>
